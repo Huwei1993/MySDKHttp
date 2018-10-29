@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: com.squareup.assertj:assertj-android-appcompat-v7:1.2.0@jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.squareup.assertj/assertj-android-appcompat-v7/1.2.0/82735154f62567cf50f67508f9699b5d64da5f0/assertj-android-appcompat-v7-1.2.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.squareup.assertj/assertj-android-appcompat-v7/1.2.0/f4be09bdf0de2324a9066b4120afb17164b27259/assertj-android-appcompat-v7-1.2.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

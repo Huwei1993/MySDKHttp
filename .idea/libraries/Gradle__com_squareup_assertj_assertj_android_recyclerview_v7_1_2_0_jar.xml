@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: com.squareup.assertj:assertj-android-recyclerview-v7:1.2.0@jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.squareup.assertj/assertj-android-recyclerview-v7/1.2.0/10520ceb9640ff41bb309f7a9893fb1b3e0768db/assertj-android-recyclerview-v7-1.2.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.squareup.assertj/assertj-android-recyclerview-v7/1.2.0/5407fe8fa1c139a96bc8d3d8d59843a99319e94e/assertj-android-recyclerview-v7-1.2.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: com.noober.background:core-1.2.5">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/core-1.2.5.aar/098f43937092029a9cdd45b4f444b430/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/core-1.2.5.aar/098f43937092029a9cdd45b4f444b430/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.noober.background/core/1.2.5/439adc34b1003f3c5d691eb346f288443ec455d5/core-1.2.5-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

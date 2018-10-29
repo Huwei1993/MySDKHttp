@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.charles.www.testDemo.view.WidthTextViewActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <TextView
+            android:id="@+id/tv_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:text="数据左边："
+            />
+        <com.charles.www.testDemo.view.AutoResizeTextView
+            android:id="@+id/tv_center"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/tv_left"
+            android:text="123"
+            android:textSize="13sp"
+            android:textColor="#ff5136"
+            android:maxLines="1"
+            android:maxHeight="50dp"
+            android:layout_centerVertical="true"
+            />
+
+        <com.charles.www.testDemo.view.AutoResizeTextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="asdsadasdsa1231323dasd"
+            android:maxLines="1"
+            android:maxHeight="50dp"
+            android:layout_centerVertical="true"
+            />
+
+
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>

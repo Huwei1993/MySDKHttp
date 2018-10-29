@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.charles.www.testDemo.activity.GoodsDetailsActivity"
+    tools:layout_editor_absoluteY="25dp"
+    >
+
+    <LinearLayout
+        android:id="@+id/ll_head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        >
+
+        <com.charles.www.testDemo.view.CircleImageView
+            android:id="@+id/iv_head"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:src="@mipmap/icon_user"
+            />
+
+        <TextView
+            android:id="@+id/tv_text_head"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="商祥页面"
+            android:textColor="@color/black"
+            android:textSize="50sp"
+            />
+    </LinearLayout>
+
+
+    <ScrollView
+        android:id="@+id/sl_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        app:layout_constraintTop_toBottomOf="@id/ll_head"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <com.charles.www.testDemo.view.FixedGridView
+                android:id="@+id/rg_contant"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:horizontalSpacing="3dp"
+                android:numColumns="5"
+                android:verticalSpacing="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                >
+            </com.charles.www.testDemo.view.FixedGridView>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="78978987"
+                />
+        </LinearLayout>
+
+    </ScrollView>
+
+
+    <com.charles.www.testDemo.view.DrawView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/sl_view"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+
+</android.support.constraint.ConstraintLayout>

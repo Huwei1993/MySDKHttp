@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/rl_activity"
+    >
+
+    <android.webkit.WebView
+        android:id="@+id/webview_dialog_birthday_question_layout"
+        android:layout_marginTop="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+    </android.webkit.WebView>
+    <RelativeLayout
+        android:id="@+id/rl_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <ImageView
+            android:id="@+id/img_dialog_birthday_question_close"
+            android:paddingTop="25dp"
+            android:paddingRight="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/dialog_birthday_question_layout_close"
+            android:layout_alignParentRight="true"
+            />
+    </RelativeLayout>
+
+
+
+    <!--android:background="#000000"-->
+    <TextView
+        android:id="@+id/tv_dialog_birthday_question_text"
+        android:layout_below="@id/rl_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20dp"
+        android:textColor="#ffffff"
+        android:textSize="20sp"
+        android:visibility="visible" />
+
+</RelativeLayout>

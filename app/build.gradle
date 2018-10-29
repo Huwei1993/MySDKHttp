@@ -1,0 +1,124 @@
+apply plugin: "com.android.application"
+//apply from: "jacoco.gradle"
+
+android {
+    compileSdkVersion projectCompileSdkVersion
+    defaultConfig {
+        applicationId "com.charles.wwww"
+        minSdkVersion projectMinSdkVersion
+        targetSdkVersion projectTargetSdkVersion
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            zipAlignEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
+        }
+    }
+
+    testOptions {
+        unitTests {
+            includeAndroidResources = true
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ["*.jar"], dir: "libs")
+    implementation "com.android.support:appcompat-v7:$supportAppcompat"
+    implementation "com.android.support:recyclerview-v7:$supportAppcompat"
+    implementation "com.android.support.constraint:constraint-layout:$supportConstraintConstraintVersion"
+    implementation "com.jakewharton:butterknife:$butterknifeVersion"
+    annotationProcessor "com.jakewharton:butterknife-compiler:$butterknifeVersion"
+    androidTestImplementation "com.android.support.test:runner:$testRunnerVersion"
+    androidTestImplementation "com.android.support.test:rules:$testRunnerVersion"
+    androidTestImplementation "com.android.support.test.espresso:espresso-core:$testEspressoEspressoCoreVersion"
+    implementation "com.facebook.stetho:stetho-okhttp3:$stethoOkhttp3Version"
+    implementation "com.github.bumptech.glide:glide:$glideVersion"
+    // 全局适配
+    implementation "com.zhy:autolayout:$autolayoutVersion"
+//    implementation "com.tamic.novate:novate:$novateVersion"
+    //    compile "com.jakewharton.rxrelay2:rxrelay:2.0.0"
+    implementation project(":httpsdk")
+    implementation files("libs/tbs_sdk_thirdapp_v3.6.0.1315_43612_sharewithdownload_withoutGame_obfs_20180718_102847.jar")
+    implementation "junit:junit:$unitVersion"
+
+    //  test Unit
+    testImplementation "org.mockito:mockito-core:$mockitoCoreVersion"
+    testImplementation "org.robolectric:robolectric:$robolectricVersion"
+
+    testImplementation "com.android.support.test:monitor:$testMonitorVersion"
+//    testCompile "org.robolectric:robolectric-annotations:$rootProject.ext.robolectricVersion"
+    //robolectric针对support-v4的shadows
+    testImplementation "org.robolectric:shadows-support-v4:$shadowsSupportVersion"
+
+    //Dagger
+    testImplementation "com.google.dagger:dagger:$daggerVersion"
+    testImplementation("com.google.dagger:dagger-android:$daggerVersion") {
+        exclude module: "support-annotations"
+    }
+    testImplementation("com.google.dagger:dagger-android-support:$daggerVersion") {
+        exclude module: "support-annotations"
+        exclude module: "appcompat-v7"
+        exclude module: "support-v4"
+    }
+    annotationProcessor "com.google.dagger:dagger-compiler:$daggerVersion"
+    annotationProcessor "com.google.dagger:dagger-android-processor:$daggerVersion"
+
+//    testCompile "com.github.andrzejchm.RESTMock:android:0.3.1"
+    //AssertJ
+    testImplementation "org.assertj:assertj-core:$assertjCoreVersion"
+
+    //AssertJ-Android module:
+    testImplementation "com.squareup.assertj:assertj-android:$assertjAndroidVersion"
+    testImplementation "com.squareup.assertj:assertj-android-support-v4:$assertjAndroidVersion"
+    testImplementation "com.squareup.assertj:assertj-android-appcompat-v7:$assertjAndroidVersion"
+    testImplementation "com.squareup.assertj:assertj-android-design:$assertjAndroidVersion"
+    testImplementation "com.squareup.assertj:assertj-android-recyclerview-v7:$assertjAndroidVersion"
+
+    //powermock
+    testImplementation "org.powermock:powermock-module-junit4:$powermockModuleJunit4Version"
+    testImplementation "org.powermock:powermock-module-junit4-rule:$powermockModuleJunit4Version"
+    testImplementation "org.powermock:powermock-api-mockito2:$powermockModuleJunit4Version"
+    testImplementation "org.powermock:powermock-classloading-xstream:$powermockModuleJunit4Version"
+
+    //mockwebserver
+    testImplementation "com.squareup.okhttp3:mockwebserver:$mockwebserverVersion"
+
+    //https://github.com/trello/RxLifecycle
+    implementation "com.trello.rxlifecycle2:rxlifecycle:$rxlifecycleVersion"
+    implementation "com.trello.rxlifecycle2:rxlifecycle-android:$rxlifecycleVersion"
+    implementation "com.trello.rxlifecycle2:rxlifecycle-components:$rxlifecycleVersion"
+
+
+    //Android超强util库  -- 算不上超强,跟apache-commons相比差太远
+    implementation "com.blankj:utilcode:$utilcodeVersion"
+
+    // 通过标签直接生成shape，无需再写shape.xml  参考 http://www.wanandroid.com/blog/show/2352
+    implementation "com.noober.background:core:$backgroundCoreVersion"
+
+
+    implementation "com.squareup.retrofit2:converter-gson:$gsonVersion"
+    implementation "com.squareup.retrofit2:retrofit:$gsonVersion"
+    implementation "com.squareup.retrofit2:adapter-rxjava:$gsonVersion"
+    implementation "com.squareup.okhttp3:okhttp:$okhttpVersion"
+    implementation "com.squareup.okhttp3:logging-interceptor:$okhttpVersion"
+//    compile "io.reactivex:rxandroid:1.2.1"
+//    compile "io.reactivex:rxjava:1.3.0"
+    //noinspection GradleDependency
+    implementation "com.android.support:support-annotations:$supportAnnotationsVersion"
+
+    implementation "io.reactivex.rxjava2:rxjava:$rxJava2Version"
+    implementation "io.reactivex.rxjava2:rxandroid:$rxAndroidVersion"
+    implementation "com.jakewharton.retrofit:retrofit2-rxjava2-adapter:$rxjava2AdapterVersion"
+    implementation "com.jakewharton.rxrelay2:rxrelay:$rxrelayVersion"
+
+    // BaseAdapter
+    implementation "com.github.CymChad:BaseRecyclerViewAdapterHelper:"
+
+
+}
